@@ -196,12 +196,6 @@ details[open] summary::after{content:"\2212"}
 @keyframes pulse{70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
 .g-row{display:grid;gap:4px;padding:14px 0;border-top:1px solid var(--line)}
 .g-row p{font-size:.95rem;line-height:1.5}
-.idx{margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px}
-.idx a{display:grid;gap:6px;align-content:start;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--surface);text-decoration:none;transition:transform .2s,border-color .2s}
-.idx a:hover{transform:translateY(-3px);border-color:var(--muted)}
-.idx a b{font-family:var(--f-display);font-weight:400;font-size:1.5rem;line-height:1.1}
-.idx .tg{color:var(--pole-b)}
-.idx .d{color:var(--muted);font-size:.9rem}
 
 /* about photo */
 .mono-tile{aspect-ratio:4/5;border-radius:14px;border:1px solid var(--line);background:var(--photo) 50% 22%/cover,var(--surface-2);position:relative;overflow:hidden;max-width:100%;transform-style:preserve-3d;transition:transform .25s ease-out;will-change:transform}
@@ -312,16 +306,6 @@ dl dd:hover{padding-left:8px}
       <div><b data-n="4">4</b><span class="mono">trials each</span></div>
       <div><b data-n="1">1</b><span class="mono">trained AI grader</span></div>
       <div><b data-n="100">100</b><span class="mono">responses per model</span></div>
-    </div>
-
-    <div class="idx">
-      <a href="#about"><span class="mono tg">Personal</span><b>About me</b><span class="d">Who is behind the project.</span></a>
-      <a href="#question"><span class="mono tg">Process &middot; Ideation</span><b>The question</b><span class="d">The problem and why it matters.</span></a>
-      <a href="#literature"><span class="mono tg">Process &middot; Literature</span><b>Background research</b><span class="d">Four themes and the research gap.</span></a>
-      <a href="#map"><span class="mono tg">Process &middot; Concept map</span><b>How ideas connect</b><span class="d">Hover a node to trace its link.</span></a>
-      <a href="#method"><span class="mono tg">Process &middot; Methodology</span><b>One procedure</b><span class="d">Prompts, trials and the grader.</span></a>
-      <a href="#timeline"><span class="mono tg">Process &middot; Timeline</span><b>Project timeline</b><span class="d">Where the work stands now.</span></a>
-      <a href="#results"><span class="mono tg">Product &middot; Results</span><b>Results</b><span class="d">What the data will show.</span></a>
     </div>
   </div>
 </section>
@@ -646,7 +630,7 @@ dl dd:hover{padding-left:8px}
     val+=(tgt-val)*(hover?.4:.1);draw();requestAnimationFrame(loop);})(t0);}
 
   /* spotlight */
-  [].forEach.call(document.querySelectorAll('.card,.q,.slot,.step,.glance,.idx a'),function(el){
+  [].forEach.call(document.querySelectorAll('.card,.q,.slot,.step,.glance'),function(el){
     el.classList.add('sp');
     el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();
       el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px');});});
